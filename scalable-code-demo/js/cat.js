@@ -19,42 +19,9 @@
  /* begin by defining the class/constructor */
  var Cat = function(photo, catName) {
 	 this.clickCount = 0;
-	 this.photo = photo;
+	 this.imgSrc = photo;
 	 this.catName = catName;
-	 this.currentCat = false;
-	 
-	 console.log("Cat initialized! Starting count: " + this.clickCount + " | photo: " + this.photo + 
+	
+	console.log("Cat initialized! Starting count: " + this.clickCount + " | photo: " + this.imgSrc + 
 	 " | name: " + this.catName);
  };
-
-
-Cat.prototype.incrementClickCount = function() {
-	 this.clickCount++;
-	 this.updateCount();
-};
-	 
-/* add the displayCat method to the prototype */
-Cat.prototype.displayCat = function() {
-	var displayArea = document.querySelector("[data-view='cat-detail']");
-	var displayCatHTML = "<img id='click-" + this.catName + "' src='" + this.photo + "' width='50%' />";
-	
-	
-	var catClickListenerArea = "";
-	
-	/* display cat */
-	displayArea.innerHTML = displayCatHTML;
-	this.updateCount();
-	
-	/* add event listener */
-	catClickListenerArea = document.getElementById("click-" + this.catName);
-	catClickListenerArea.addEventListener("click", this.incrementClickCount.bind(this));
-	this.currentCat = true;
-};
-
-Cat.prototype.updateCount = function() {
-	var displayClickCount = document.querySelector("[data-view='click-count']");
-	var displayClickCountHTML = "<p>Cat Clicked " + this.clickCount + " Times!</p>";
-	
-	console.log("Cat clicked " + this.clickCount + " times!");
-	displayClickCount.innerHTML = displayClickCountHTML;
-}
