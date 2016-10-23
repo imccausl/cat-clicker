@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" 
@@ -36,23 +36,30 @@
 							aria-expanded="false">
 								Select Cat <span class="caret"></span>
 							</a>
+							<!-- Cat Selector Dropdown -->
 							<ul class="dropdown-menu" id="ct-cat-selector">
 								<li><a href="#">Burrito</a></li>
 								<li><a href="#">Angry</a></li>
 								<li><a href="#">Sleepy</a></li>
 								<li><a href="#">Playful</a></li>
 								<li><a href="#">Orange</a></li>
-							</ul>
+							</ul> <!-- end Cat Selector Dropdown -->
 					</li>
+					<li><a href="#">Admin</a></li>
 				</ul>
 				
 			</div><!-- /navbar collapsable menu items-->
 		</div><!-- /.container-fluid -->
 	</nav>
 	
-	<div class="container-fluid">		
-		<div data-view="cat-detail"></div>
-		<div data-view="click-count"></div>
+	<div class="container-fluid">
+			<div class="panel panel-default" id="cat">
+				<div class="panel-heading"><h2 id="cat-name" class="text-capitalize"></h2></div>
+				<div class="panel-body">
+					<img id="cat-img" width="60%" src="" alt="cat picture">
+				</div>
+			</div>
+			<div class="well well-sm text-capitalize" id="cat-count"></div>
 	</div>
 	
 	<!-- scripts -->
