@@ -59,7 +59,6 @@
 			// update the DOM elements with the current cat information.
 			var currentCat = controller.getCurrentCat();
 			
-			console.log("New rendering the view with: " + currentCat.imgSrc);
 			this.countElem.textContent = currentCat.catName + " has been clicked "+ currentCat.clickCount + " times.";
 			this.catNameElem.textContent = currentCat.catName;
 			this.catImgElem.src = currentCat.imgSrc;
@@ -81,8 +80,6 @@
 				
 				model.cats[name] = new Cat(imagePath, name);
 			}
-			
-			console.log(model.cats);
 		},
 		
 		parseCatNamesFromMenu: function() {
@@ -101,8 +98,6 @@
 		
 		setCurrentCat: function(cat) {
 			model.currentCat = cat;
-			console.log("The variable passed into setCurrentCat function is: " + cat);
-			console.log("Current cat set to: " + model.currentCat);
 		},
 		
 		getCurrentCat: function() {
