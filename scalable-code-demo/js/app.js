@@ -1,6 +1,16 @@
 /* app.js */
 
 (function() { 	
+	
+	var Cat = function(photo, catName) {
+		this.clickCount = 0;
+		this.imgSrc = photo;
+		this.catName = catName;
+	
+		console.log("Cat initialized! Starting count: " + this.clickCount + " | photo: " + this.imgSrc + 
+		" | name: " + this.catName);
+ 	};
+ 
 	var model = {
 		cats: {},
 		currentCat: {},
