@@ -2,6 +2,9 @@
 
 (function() { 	
 	
+	// the Cat constructor function makes things super flexible and stops me from repeating myself
+	// in the model, like in the example app. We can make as many cats as we bloody well please with hardly
+	// any effort!
 	var Cat = function(photo, catName) {
 		this.clickCount = 0;
 		this.imgSrc = photo;
