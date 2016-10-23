@@ -1,6 +1,5 @@
 /* 	app.js 
- *	Where the cat logic lives 
- *  for the cat clicker app */
+
  
 /* First, define a class. The class, Cat, needs a *clickCount* property to keep track of the number
  * of times it is clicked; It needs a *incrementClickCount* method, to increment the clickCount on click; It  
@@ -17,11 +16,3 @@
  */
  
  /* begin by defining the class/constructor */
- var Cat = function(photo, catName) {
-	 this.clickCount = 0;
-	 this.imgSrc = photo;
-	 this.catName = catName;
-	
-	console.log("Cat initialized! Starting count: " + this.clickCount + " | photo: " + this.imgSrc + 
-	 " | name: " + this.catName);
- };
