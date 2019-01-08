@@ -1,2 +1,3 @@
-# udacity
-A repository for udacity exercise files
+# Cat Clicker
+
+Some coding practice using OOO in JavaScript.
